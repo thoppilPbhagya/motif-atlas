@@ -39,8 +39,7 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v9
         with:
-          version: v2.13
-          install-mode: goinstall
+          version: v2.15
           working-directory: api
 
       - name: go test (with race detector)
