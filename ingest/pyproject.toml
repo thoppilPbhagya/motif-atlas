@@ -1,0 +1,15 @@
+[project]
+name = "motif-atlas-ingest"
+version = "0.1.0"
+description = "Python ingestion pipeline for Motif Atlas"
+requires-python = ">=3.13"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+# E/F = pycodestyle + pyflakes (the basics), I = import sorting, B = common bugs, UP = modern syntax
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

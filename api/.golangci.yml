@@ -1,0 +1,11 @@
+# golangci-lint configuration (v2 format).
+version: "2"
+
+linters:
+  # "standard" = errcheck, govet, ineffassign, staticcheck, unused.
+  default: standard
+  exclusions:
+    presets:
+      # Don't flag unchecked errors from Close() and similar calls,
+      # which are routinely ignored in Go code (e.g. defer rdb.Close()).
+      - std-error-handling
